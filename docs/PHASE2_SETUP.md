@@ -25,7 +25,7 @@ Copy `.env.example` to a private `.env`, generate two different long random secr
 python3 -c "import secrets; print(secrets.token_urlsafe(32))"
 ```
 
-Set environment variables from that file in your service shell. Do not expose port 8000 to the LAN; the Flask development process binds to localhost. The polling agent runs in the same process and reaches the local API.
+Load the variables in the service shell (the application does not automatically parse .env):\n\n\`\`\`bash\nset -a\nsource .env\nset +a\n\`\`\`\n\nDo not expose port 8000 to the LAN; the Flask development process binds to localhost. The polling agent runs in the same process and reaches the local API. Open the resident console on the Pi itself at http://127.0.0.1:8000/admin. Paste the admin token into the page to list, enroll and remove residents. The page shell is unauthenticated on localhost; its data APIs require the admin token.
 
 ## 3. Configure ESP32-CAM
 
