@@ -296,6 +296,12 @@ def agent_loop():
         time.sleep(POLL_SECONDS)
 
 
+@app.get("/admin")
+def admin_dashboard():
+    require_admin()
+    return app.send_static_file("dashboard.html")
+
+
 @app.get("/admin/agent-status")
 def agent_status():
     require_admin()
