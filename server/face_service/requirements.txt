@@ -1,0 +1,4 @@
+Flask>=3.0,<4
+numpy>=1.26
+opencv-contrib-python>=4.9
+requests>=2.31
