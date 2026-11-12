@@ -298,7 +298,8 @@ def agent_loop():
 
 @app.get("/admin")
 def admin_dashboard():
-    require_admin()
+    # The dashboard shell is public on localhost; all data-changing/admin APIs
+    # remain protected by the admin bearer token.
     return app.send_static_file("dashboard.html")
 
 
