@@ -1,0 +1,8 @@
+# Local credentials and biometric data
+.env
+**/.env
+**/secrets.h
+server/face_service/data/
+server/face_service/.venv/
+server/face_service/__pycache__/
+*.pyc
