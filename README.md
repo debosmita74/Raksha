@@ -35,7 +35,7 @@ The Pi stores resident face crops locally under its private data directory. No b
 - `firmware/main_esp32/` — Phase 1 A9G SMS/GPS and intrusion starter.
 - `firmware/esp32_cam/` — AI-Thinker ESP32-CAM JPEG endpoint.
 - `firmware/phase2_access_controller/` — authenticated Phase 2 ESP32 access endpoint.
-- `server/face_service/` — Raspberry Pi OpenCV LBPH service, resident enrollment API and camera polling agent.
+- `server/face_service/` — Raspberry Pi OpenCV LBPH service, resident enrollment API, local admin dashboard and camera polling agent.
 - `hardware/WIRING.md` — Phase 1 signal/power guidance.
 - `hardware/PHASE2_WIRING.md` — Phase 2 network and pin wiring.
 - `docs/TEST_PLAN.md` — bench and safety test plan.
@@ -50,7 +50,7 @@ Read [Phase 2 setup](docs/PHASE2_SETUP.md) and [Phase 2 wiring](hardware/PHASE2_
 2. Install `server/face_service/requirements.txt` on Raspberry Pi OS 64-bit.
 3. Set separate random `RAKSHA_ADMIN_TOKEN` and `RAKSHA_API_TOKEN` values on the Pi; set matching Wi-Fi/API settings locally in the ESP32 sketch.
 4. Configure the Pi's camera and ESP32 URLs and reserve their IP addresses.
-5. Enroll only consenting residents using at least five images each.
+5. Open the local resident console at `http://127.0.0.1:8000/admin` on the Pi and enroll only consenting residents using at least five images each.
 6. Verify recognition and the ESP32 health endpoint with the lock disconnected.
 7. Keep `RAKSHA_ENABLE_MATCH_ONLY_ACCESS=false` until a separately validated liveness or second-factor method is integrated.
 
