@@ -8,7 +8,7 @@ Raksha is a modular home-entry and intrusion-alert prototype built around an ESP
 
 - ESP32 DevKit main controller
 - AI-Thinker ESP32-CAM camera endpoint
-- Raspberry Pi 4 or 5 for local face matching and resident enrollment
+- Laptop for local face matching and resident enrollment
 - A9G GSM/GPRS + GPS board for SMS/GPS alerts (board-specific power and AT commands must be verified)
 - Protected battery pack, appropriately rated regulators, fuse and low-voltage cutoff
 - PIR/door contact, siren driver and optional isolated lock driver
